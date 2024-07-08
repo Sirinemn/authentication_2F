@@ -22,20 +22,20 @@ Ce projet implémente une authentification à deux facteurs (2FA) sécurisée po
 
 ## Instructions de configuration de Backend:
 
-1.Run the docker-compose file:
+1. Run the docker-compose file:
  docker-compose up -d
 2. Ce positionner sur le dossier back:
   cd back
-3.Install dependencies (assuming Maven is installed):
+3. Install dependencies (assuming Maven is installed):
  mvn clean install
-4.Exécutez l'application mais remplacez d'abord le x.x.x par la version actuelle du fichier pom.xml:
+4. Exécutez l'application mais remplacez d'abord le x.x.x par la version actuelle du fichier pom.xml:
   java -jar target/book-network-api-x.x.x.jar
-5.Accédez à la documentation de l'API à l'aide de l'interface utilisateur Swagger:
+5. Accédez à la documentation de l'API à l'aide de l'interface utilisateur Swagger:
   http://localhost:8080/swagger-ui/index.html
 
 ## Instruction de configuration de frontend:
 
-1.Serveur de développement:
+1. Serveur de développement:
   Exécutez ng serve pour un serveur de développement. Accédez à http://localhost:4200/. L'application se rechargera automatiquement si vous modifiez l'un des fichiers source.
-2.Build:
+2. Build:
   Exécutez ng build pour construire le projet. Les artefacts de build seront stockés dans le répertoire dist/.
