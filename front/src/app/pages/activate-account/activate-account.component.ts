@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/services/authentication.service';
+import {skipUntil} from 'rxjs';
+
 
 @Component({
   selector: 'app-activate-account',
@@ -41,6 +43,6 @@ export class ActivateAccountComponent {
     this.confirmAccount(token);
   }
 
-  //protected readonly skipUntil = skipUntil;
+  protected readonly skipUntil = skipUntil;
 
 }
