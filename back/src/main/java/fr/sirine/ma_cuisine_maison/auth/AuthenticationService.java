@@ -27,17 +27,18 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
-    
-    private final RoleRepository roleRepository;
-    private final PasswordEncoder passwordEncoder;
+
     private final UserRepository userRepository;
-    private final TokenRepository tokenRepository;
-    private final EmailService emailService;
-    private final AuthenticationManager authenticationManager;
+    private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
+    private final AuthenticationManager authenticationManager;
+    private final RoleRepository roleRepository;
+    private final EmailService emailService;
+    private final TokenRepository tokenRepository;
 
     @Value("${app.mailing.frontend.activation-url}")
     private String activationUrl;
+
     public void register(RegistrationRequest request) throws MessagingException {
         var userRole = roleRepository.findByName("USER")
                 // todo - better exception handling
@@ -53,7 +54,6 @@ public class AuthenticationService {
                 .build();
         userRepository.save(user);
         sendValidationEmail(user);
-
     }
 
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
@@ -99,7 +99,7 @@ public class AuthenticationService {
         var token = Token.builder()
                 .token(generatedToken)
                 .createdAt(LocalDateTime.now())
-                .expiresAt(LocalDateTime.now().plusMinutes(20))
+                .expiresAt(LocalDateTime.now().plusMinutes(15))
                 .user(user)
                 .build();
         tokenRepository.save(token);
@@ -133,6 +133,5 @@ public class AuthenticationService {
 
         return codeBuilder.toString();
     }
-
 
 }
