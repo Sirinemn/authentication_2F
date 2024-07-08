@@ -1,7 +1,7 @@
-#My personnel project
+# My personnel project
 Ce projet implémente une authentification à deux facteurs (2FA) sécurisée pour une application web utilisant Spring Boot pour le backend et Angular pour le frontend. Le système utilise l'e-mail comme méthode de vérification secondaire pour confirmer l'identité de l'utilisateur lors de la connexion.
 
-##Fonctionnalités:
+## Fonctionnalités:
 
 * Authentification de base avec nom d'utilisateur et mot de passe
 * Enregistrement de l'utilisateur avec vérification par e-mail
@@ -10,7 +10,7 @@ Ce projet implémente une authentification à deux facteurs (2FA) sécurisée po
 * Validation du code de vérification lors de la connexion
 * Désactivation de la 2FA si nécessaire
 
-##Technologie utilisés:
+## Technologie utilisés:
 
 * Spring Boot 3: Un framework puissant pour créer des applications basées sur Java.
 * Spring Security 6: Fournit des mécanismes d’authentification et d’autorisation pour sécuriser l’application.
@@ -20,7 +20,7 @@ Ce projet implémente une authentification à deux facteurs (2FA) sécurisée po
 * OpenAPI and Swagger UI Documentation: Génère de la documentation pour les points de terminaison de l'API.
 * Docker : facilite la conteneurisation de l'application backend pour le déploiement.
 
-##Instructions de configuration de Backend:
+## Instructions de configuration de Backend:
 
 1.Run the docker-compose file:
  docker-compose up -d
@@ -33,7 +33,7 @@ Ce projet implémente une authentification à deux facteurs (2FA) sécurisée po
 5.Accédez à la documentation de l'API à l'aide de l'interface utilisateur Swagger:
   http://localhost:8080/swagger-ui/index.html
 
-##Instruction de configuration de frontend:
+## Instruction de configuration de frontend:
 
 1.Serveur de développement:
   Exécutez ng serve pour un serveur de développement. Accédez à http://localhost:4200/. L'application se rechargera automatiquement si vous modifiez l'un des fichiers source.
