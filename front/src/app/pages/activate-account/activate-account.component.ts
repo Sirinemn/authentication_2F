@@ -24,6 +24,7 @@ export class ActivateAccountComponent {
       token
     }).subscribe({
       next: () => {
+        this.isOkay = true;
         this.message = 'Your account has been successfully activated.\nNow you can proceed to login';
         this.submitted = true;
       },
